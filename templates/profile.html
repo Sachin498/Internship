@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}Credentials{% endblock %}
+
+{% block content %}
+<h2>Credentials</h2> <p>{{ username}} !!! <br><br>Your credentials are given below:</p>
+{% for item in account %}
+<div>
+   
+    
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td>{{ item['username'] }}</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>{{ item['password'] }}</td>
+        </tr>
+        <tr>
+            <td>Website:</td>
+            <td>{{ item['web'] }}</td>
+        </tr>
+    </table>
+    
+</div>
+{% endfor %}
+{% endblock %}
